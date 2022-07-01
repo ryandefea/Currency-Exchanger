@@ -12,3 +12,7 @@ async function makeApiCall(country, amount) {
   const response = await CurrencyService.getCurrency(country, amount);
   getCurrencyInfo(response);
 }
+
+$(document).ready(function() {
+  $('#')
+})
