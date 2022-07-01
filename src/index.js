@@ -5,14 +5,23 @@ import './css/styles.css';
 import CurrencyService from './currency-service.js';
 
 
+const service = new CurrencyService();
+//function getCurrencyInfo(country, amount) {
+
+//}
 
 
 
 async function makeApiCall(country, amount) {
-  const response = await CurrencyService.getCurrency(country, amount);
-  getCurrencyInfo(response);
+  const response = await service.getCurrency(country, amount);
+  //getCurrencyInfo(response);
+  console.log(response);
 }
 
 $(document).ready(function() {
-  $('#')
+  $('#moneySubmit').click(function () {
+    let amount = parseInt($('#amount').val());
+    let country = $('#country').val();
+    makeApiCall(country, amount);
+  })
 })
